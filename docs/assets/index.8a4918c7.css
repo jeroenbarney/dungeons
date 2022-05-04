@@ -1,1 +1,0 @@
-.dungeons{display:grid;grid-template-columns:repeat(3,auto);place-content:center;user-select:none}.dungeon{display:contents;cursor:pointer}.dungeon>*{padding:0 10px}pre{user-select:all}body{display:grid;place-items:center;height:100vh}

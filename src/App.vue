@@ -87,19 +87,29 @@ body {
   place-items: center;
   height: 100vh;
 }
+
+.line {
+  grid-column: 1/-1;
+  height: 1px;
+  width: 100%;
+  background: #d3d3d3;
+  margin: 3px;
+}
 </style>
 
 <template>
   <div class="dungeons">
     <div class="dungeon" @click="toggleAll()">
       <input type="checkbox" :checked="all">
-      <span>Allemaal</span>
+      <span style="font-weight: bold;text-decoration: underline; text-align: center;">Allemaal</span>
       <span></span>
+      <div class="line"></div>
     </div>
     <div class="dungeon" v-for="dungeon in dungeons" @click="click(dungeon)">
       <input v-model="selected" :value="dungeon.short" type="checkbox">
       <span>{{ dungeon.name }}</span>
       <span>{{ dungeon.short }}</span>
+      <div class="line"></div>
     </div>
   </div>
   <pre @click="copy()">partyfit{{ selectedText }}</pre>
